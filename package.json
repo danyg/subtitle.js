@@ -1,5 +1,5 @@
 {
-  "name": "dgSubtitle",
+  "name": "dgsubtitle",
   "version": "0.0.9",
   "description": "Parse and manipulate SRT (SubRip) <fork of subtitle>",
   "repository": {
