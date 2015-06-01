@@ -1,14 +1,14 @@
 {
-  "name": "subtitle",
-  "version": "0.0.8",
-  "description": "Parse and manipulate SRT (SubRip)",
+  "name": "dgSubtitle",
+  "version": "0.0.9",
+  "description": "Parse and manipulate SRT (SubRip) <fork of subtitle>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gsantiago/subtitle.js"
+    "url": "https://github.com/danyg/subtitle.js.git"
   },
   "main": "subtitle.js",
   "scripts": {
-    "test": "make test"
+    "test": "node npm_script_test.js"
   },
   "keywords": [
     "subtitle",
@@ -19,7 +19,7 @@
     "parser",
     "stringfy"
   ],
-  "author": "Guilherme Santiago",
+  "author": "Daniel Goberitz <danyg>",
   "license": "MIT",
   "devDependencies": {
     "chai": "^2.2.0",
