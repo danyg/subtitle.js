@@ -50,7 +50,7 @@ Subtitle.prototype.parse = function (srt) {
 			return; // Wrong block
 		}
 
-		var lines = block.split('\n');
+		var lines = block.trim().split('\n');
 
 		var index = parseInt(lines.shift(), 10),
 			time = lines.shift().toString(),
@@ -64,13 +64,15 @@ Subtitle.prototype.parse = function (srt) {
 			end = match[2];
 		}
 
-		subs.push({
-			index: index,
-			start: start,
-			end: end,
-			duration: Subtitle.toMS(end) - Subtitle.toMS(start),
-			text: lines.join('\n').trim()
-		});
+		try{
+			subs.push({
+				index: index,
+				start: start,
+				end: end,
+				duration: Subtitle.toMS(end) - Subtitle.toMS(start),
+				text: lines.join('\n').trim()
+			});
+		}catch(e){}
 	});
 
 	this._subtitles = subs;
